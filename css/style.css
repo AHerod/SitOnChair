@@ -42,7 +42,6 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
-  color:white;
   text-decoration: none;
 }
 
@@ -71,9 +70,8 @@ header{
   display: flex;
   justify-content: space-between;
 }
-
-.logo_container p span{
-  color: #24BA9F;
+.logo_container a{
+  color:white;
 }
 
 .nav_container{
@@ -104,6 +102,10 @@ header{
 
 .main_nav a{
   color:white;
+}
+/*span dla logo i dla napisu w głównej sekcji*/
+span{
+  color: #24BA9F;
 }
 
   /* ******** SUBMENU ********** */
@@ -153,4 +155,76 @@ header{
   -moz-box-shadow: 7px 6px 0px -2px rgba(36,186,160,1);
   box-shadow: 7px 6px 0px -2px rgba(36,186,160,1);
   transition: 0s 4s;
+}
+
+ /* ######### SECTION SLIDER ######### */
+section{
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(229,229,229,1) 73%,rgba(201,201,201,1) 99%);
+
+}
+
+.slider{
+  height: 550px;
+ /*border: 3px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slider_photo{
+  width: 700px;
+  height: 450px;
+  background-image: url("images/black_chair.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: center;
+
+
+  /* border: 2px dashed gold;*/
+
+
+}
+.slider_article{
+  width: 700px;
+  height: 450px;
+ /* border: 2px dashed purple; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 150px;
+
+}
+.article_text{
+  text-align: center;
+  font-family: 'ralewayregular', Arial, Tahoma, sans-serif;
+
+}
+.article_text .text_title{
+  font-size: 45px;
+}
+.article_text .text_content{
+  line-height: 25px;
+  padding: 40px 30px 40px 30px;
+}
+.green_button{
+  color: white;
+  font-size: 20px;
+  font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+
+  text-decoration: none;
+  background-color: #24BA9F;
+  padding: 15px 50px 15px 50px;
+  border: 1px solid #24BA9F;
+  border-radius: 10px;
+
+}
+.green_button:hover, .next:hover{
+  cursor: pointer;
+}
+.next{
+  font-size: 90px;
+  color: #24BA9F;
 }
