@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sit On Chair</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="main_width main_container">
-            <div class="logo_container">
+            <div class="logo_container grow">
                 <p><a href="#">sit <span>on</span> chair</a></p>
             </div>
             <div class="nav_container">
@@ -30,7 +31,7 @@
     </header>
     <section class="main">
         <div class="slider main_width">
-            <div  class="next"> &lt; </div>
+            <div  class="next left "> &lt; </div>
             <div class="slider_photo">
                 <div class="chairImg"></div>
             </div>
@@ -38,18 +39,121 @@
                 <div class="article_text">
                     <h1 class="text_title">SIT <span>ON</span> OUR <span>CHAIR</span></h1>
                     <p class="text_content">
-                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper.<br>
-                        Suspendisse a pellentesque dui, non felis. Maecenas<br>
-                        malesuada elit lectus felis, malesuada ultricies. Curabitur et<br>
+                        Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+                        Suspendisse a pellentesque dui, non felis. Maecenas
+                        malesuada elit lectus felis, malesuada ultricies. Curabitur et
                         ligula. Ut molestie a, ultricies porta urna.
                     </p>
                 </div>
                 <div>
-                    <button class="green_button"type="submit">ZOBACZ WIĘCEJ</button>
+                    <button class="green_button grow" type="submit">ZOBACZ WIĘCEJ</button>
                 </div>
             </article>
-            <div  class="next"> &gt; </div>
+            <div  class="next right"> &gt; </div>
         </div>
     </section>
+    <section class="second">
+        <div class="gallery main_width">
+            <div><p id="tab1"><u>Chair CLAIR</u></p></div>
+            <div><p id="tab2"><u>Chair MARGARITA</u></p></div>
+            <div>
+                <h2>Finds all inputs</h2>
+                <p>
+                    Finds all inputs that are not checked and highlights the
+                    next sibling span. Notice there is no change when the
+                    checkboxes since no click events have been linked.
+                </p>
+                <p>
+                    Notice there is no change when the checkboxes since
+                    no click events have been
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="third">
+        <div class="section_header main_width">
+            <h2>CENNIK</h2>
+        <div class="price_container main_width">
+            <div class="card_default card_1">
+                <h3>BASIC PLAN</h3>
+                <div class="circle">
+                    <p>85<sup>99</sup></p>
+                    <p>PLN/MSC</p>
+                </div>
+                <div class ="rect">
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                </div>
+                <button class="green_button grow">DOŁĄCZ</button>
+            </div>
+            <div class="card_default card_2">
+                <h3>STANDARD PLAN</h3>
+                <div class="circle">
+                    <p>95<sup>99</sup></p>
+                    <p>PLN/MSC</p>
+                </div>
+                <div class="rect">
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <p>Gwarancja 5 lat</p>
+                </div>
+                <button class="green_button grow" >DOŁĄCZ</button>
+            </div>
+            <div class="card_default card_3">
+                <h3>ADVANCE PLAN</h3>
+                <div class="circle">
+                    <p>211<sup>00</sup></p>
+                    <p>PLN/MSC</p>
+                </div>
+                <div class="rect">
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <p>Gwarancja 6 lat</p>
+                    <p>Porady projektanta</p>
+                </div>
+                <button class="green_button grow">DOŁĄCZ</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="fourth">
+        <div class="section_header main_width">
+            <h2>KONTAKT</h2>
+        <div class="contact main_width">
+            <div class="left_container">
+                <form>
+                <input type="text" placeholder="Imię" name="name">
+                <input type="email" placeholder="email" name="email">
+                    <textarea rows="4" cols="50" placeholder="Wiadomość"></textarea>
+                </form>
+            </div>
+            <div class="right_container">
+                <div class="form_photo"></div>
+                <label class="container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Zgadzam się na przetwarzanie danych osobowych
+                </label>
+                <button class="green_button">WYŚLIJ</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer class="main_width">
+
+            <div id = "copyrights">
+                Copyright 2014 &vert; All Rights Reserved. - Sit On Chair
+            </div>
+            <div class="bottom_right">
+                <div id = "sites">
+                    <a href="https://www.flickr.com/" target="_blank"> <div id="flickr"></div></a>
+                    <a href="https://vimeo.com/" target="_blank"> <div id="vimeo"></div></a>
+                    <a href="https://pl.pinterest.com/" target="_blank"> <div id="pinterest"></div></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank"> <div id="twitter"></div></a>
+                </div>
+                <div>SIT <span>ON</span> CHAIR</div>
+            </div>
+
+    </footer>
 </body>
 </html>
