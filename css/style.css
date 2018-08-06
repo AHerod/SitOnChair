@@ -318,7 +318,7 @@ u{
 }
 
 .price_container{
-  height: 1000px;
+  height: 800px;
   display: flex;
   justify-content: space-between;
   margin-top: 120px;
@@ -540,6 +540,11 @@ form input{
   font-size: 50px;
   padding: 20px;
 }
+form input:focus,
+textarea:focus{
+  background-color: #E4E4E4;
+  outline-color: #24BA9F;
+}
 form input::placeholder,
 textarea::placeholder{
   color: #D8D8D8;
@@ -631,39 +636,27 @@ footer{
   color: #9D9D9D;
   font-family: 'ralewaybold', Arial, Tahoma, sans-serif;
 }
-
 #sites{
   display: flex;
 }
-#flickr{
+#sites div{
   width: 50px;
   height: 50px;
-  background-image: url("images/flickr.png");
   background-repeat: no-repeat;
   background-size: contain;
+}
+#flickr{
+  background-image: url("images/flickr.png");
 }
 #vimeo{
-  width: 50px;
-  height: 50px;
   background-image: url("images/vimeo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 #pinterest{
-  width: 50px;
-  height: 50px;
   background-image: url("images/pinterest.png");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 #twitter{
-  width: 50px;
-  height: 50px;
   background-image: url("images/twitter.png");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
-
 .bottom_right div:last-of-type{
   padding-top: 15px;
 }
