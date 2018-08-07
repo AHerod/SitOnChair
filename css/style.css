@@ -248,7 +248,7 @@ header span,
 .gallery div{
   width: 510px;
 }
-.gallery div:first-child{
+.gallery #first_div{
   height: 350px;
 
   background-image: url("images/box1_img.jpg");
@@ -258,7 +258,7 @@ header span,
   position: relative;
 
 }
-.gallery div:nth-of-type(2){
+.gallery #second_div{
   height: 350px;
 
   background-image: url("images/box2_img.jpg");
@@ -268,20 +268,22 @@ header span,
   position: relative;
 
 }
-.gallery div:nth-of-type(3){
+.gallery #third_div{
   height: 400px;
   padding: 40px 35px 45px 35px;
   border: 3px solid #F1F1F1;
 }
-.gallery div:nth-of-type(3) h2, p{
-  font-family: 'ralewayregular', Arial, Tahoma, sans-serif;
+.gallery #third h2, p{
+  font-family: 'raleway', Arial, Tahoma, sans-serif;
 }
-.gallery div:nth-of-type(3) h2{
-  bottom-padding: 10px;
+.gallery #third_div h2{
+  line-height: 40px;
   margin-right: 240px;
   border-bottom: 10px solid #24BA9F;
+  font-family: 'ralewaybold', Arial, Tahoma, sans-serif;
+
 }
-.gallery div:nth-of-type(3) p{
+.gallery #third_div p{
   line-height: 32px;
   font-size: 21px;
   padding-top: 30px;
@@ -292,22 +294,20 @@ header span,
 #tab2{
   position: absolute;
   top: 200px;
-  font-size: 25px;
-  font-family: 'ralewaybold', Arial, Tahoma, sans-serif;
-  line-height: 100px;
-  width: 510px;
   height: 100px;
   background-color: rgba(254, 254, 255, 0.5);
   padding-left: 20px;
-  /*text-decoration: underline;
-  text-decoration-color: #27C7AB;*/
+  padding-top: 20px;
 }
-
-u{
-  text-decoration: none;
+#tab1 p,
+#tab2 p{
+  font-size: 25px;
+  font-family: 'ralewaybold', Arial, Tahoma, sans-serif;
+  line-height: 40px;
   border-bottom: 10px solid #24BA9F;
-}​
-
+  margin-right: 270px;
+  padding-left: 3px;
+}
       /* ######### SECTION 3 PRICE CARDS ######### */
 
 .third{
@@ -628,13 +628,12 @@ footer{
 .bottom_right{
   width: 520px;
   font-weight: bolder;
-  font-family: 'raleway', Arial, Tahoma, sans-serif;
+  font-family: 'ralewaybold', Arial, Tahoma, sans-serif;
   display: flex;
   justify-content: space-between;
 }
 .bottom_right span{
   color: #9D9D9D;
-  font-family: 'ralewaybold', Arial, Tahoma, sans-serif;
 }
 #sites{
   display: flex;
@@ -658,5 +657,5 @@ footer{
   background-image: url("images/twitter.png");
 }
 .bottom_right div:last-of-type{
-  padding-top: 15px;
+  padding-top: 20px;
 }
