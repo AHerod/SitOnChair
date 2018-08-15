@@ -31,9 +31,11 @@
     </header>
     <section class="main">
         <div class="slider main_width">
-            <div  class="next left "> &lt; </div>
+            <div class ="next left"> &lt; </div>
             <div class="slider_photo">
-                <div class="chairImg"></div>
+                <div class = "slide slide1"></div>
+                <div class = "slide slide2"></div>
+                <div class = "slide slide3"></div>
             </div>
             <article class="slider_article">
                 <div class="article_text">
@@ -49,7 +51,7 @@
                     <button class="green_button grow" type="submit">ZOBACZ WIĘCEJ</button>
                 </div>
             </article>
-            <div  class="next right"> &gt; </div>
+            <div class="next right"> &gt;</div>
         </div>
     </section>
     <section class="second">
@@ -116,6 +118,81 @@
         </div>
         </div>
     </section>
+    <section class="application ">
+        <div class="main_width">
+            <section class="choice_part inline">
+                <div>
+                    <h2>SKOMPONUJ SWOJE KRZESŁO</h2>
+                    <span class="green_bell"></span>
+                </div>
+
+                <div class="form">
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz rodzaj</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li data-chair-price="200">Clair</li>
+                            <li data-chair-price="250">Margarita</li>
+                            <li data-chair-price="300">Selena</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz kolor</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li data-color-price="0">Czerwony</li>
+                            <li data-color-price="0">Czarny</li>
+                            <li data-color-price="0">Pomarańczowy</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz materiał</span>
+                        <span class="list_arrow"></span>
+                        <ul class="list_panel">
+                            <li data-material-price="70">Tkanina</li>
+                            <li data-material-price="190">Skóra</li>
+                        </ul>
+                    </div>
+                    <div class="checkbox check-box">
+                        <input type="checkbox" id="transport" data-transport-price="200">
+                        <label for="transport">Transport</label>
+                    </div>
+                    <!--<div class="checkbox"></div>-->
+                    <!--<span class="list_label inline_text">Transport</span>-->
+                </div>
+            </section>
+
+            <section class="image_part inline">
+                <img src="Dodatkowe-kalkulator/images/red_chair.png">
+            </section>
+
+            <section class="summary_part inline">
+                <div class="align_right">
+                    <h2>PODSUMOWANIE</h2>
+                    <span class="green_bell"></span>
+                </div>
+
+                <div class="summary_panel">
+                    <div class="panel_left">
+                        <span class="title"><h4>Twój fotel</h4></span>
+                        <span class="color"></span>
+                        <span class="pattern"></span>
+                        <span class="transport"></span>
+                    </div>
+                    <div class="panel_right">
+                        <span class="title value"></span>
+                        <span class="color value"></span>
+                        <span class="pattern value"></span>
+                        <span class="transport value"></span>
+                    </div>
+                    <div class="sum_label">SUMA<div id="sum"></div>
+                    </div>
+                </div>
+
+                <a href="" class="green_button">Zamawiam</a>
+            </section>
+        </div>
+    </section>
     <section class="fourth">
         <div class="section_header main_width">
             <h2>KONTAKT</h2>
@@ -140,7 +217,6 @@
         </div>
     </section>
     <footer class="main_width">
-
             <div id = "copyrights">
                 Copyright 2014 &vert; All Rights Reserved. - Sit On Chair
             </div>
