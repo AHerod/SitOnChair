@@ -1,52 +1,37 @@
 /* sub_nav display */
 document.addEventListener("DOMContentLoaded", function () {
 
-
   var mainNav = document.querySelector(".main_nav");
   var firstLink = mainNav.firstElementChild;
   var firstPhoto = document.getElementById("first_div");
   var secondPhoto = document.getElementById("second_div");
   var firstTab = document.getElementById("tab1");
   var secondTab = document.getElementById("tab2");
-
   var subNav = document.querySelector(".sub_nav");
+
   firstLink.addEventListener("mouseover", function () {
-
     subNav.style.display = "block";
-
   });
-
   subNav.addEventListener("mouseout", function () {
-
     this.style.display = "none";
-
   });
 
   firstPhoto.addEventListener("mouseover", function () {
-
     firstTab.style.display = "none";
-
   });
   firstPhoto.addEventListener("mouseout", function () {
-
     firstTab.style.display = "block";
 
   });
 
   secondPhoto.addEventListener("mouseover", function () {
-
     secondTab.style.display = "none";
-
   });
   secondPhoto.addEventListener("mouseout", function () {
-
     secondTab.style.display = "block";
-
   });
 
-//slider
-
-
+/*  ##### slider ##### */
 var slider = document.querySelector(".slider_photo");
 var sliderImages = document.querySelectorAll(".slide");
 var next = document.querySelector(".right");
@@ -59,27 +44,23 @@ var current = 0;
       sliderImages[i].style.display = "none";
     }
   }
-
 // Init slider
   function startSlide() {
     reset();
     sliderImages[0].style.display = "block";
   }
-
 // Show prev
   function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
     current--;
   }
-
 // Show next
   function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
     current++;
   }
-
 // Left arrow click
   prev.addEventListener("click", function() {
     if (current === 0) {
@@ -87,7 +68,6 @@ var current = 0;
     }
     slideLeft();
   });
-
 // Right arrow click
   next.addEventListener("click", function() {
     if (current === sliderImages.length - 1) {
@@ -95,12 +75,9 @@ var current = 0;
     }
     slideRight();
   });
-
   startSlide();
 
-
   /*#########  dropdown lists  ####### */
-
   //lists
   var allLists = document.querySelectorAll(".drop_down_list"),
     type = allLists[0],
@@ -127,9 +104,7 @@ function displayStyle(element){
     element.style.display = "none";}
 }
 
-
 /* LISTS STYLE DISPLAY CHANGES */
-
   arrow1.addEventListener("click", function () {
     displayStyle(typeElements);
   });
@@ -141,12 +116,6 @@ function displayStyle(element){
   });
 
 /*adding element to the shopping list*/
-
-
-/*transport Y/N */
-
-
-
   var chairItems = listElements[0].children;
   var colorItems = listElements[1].children;
   var materialItems = listElements[2].children;
@@ -172,11 +141,26 @@ function displayStyle(element){
     titleList.innerHTML = element.innerText;
     titlePrice.innerHTML = element.dataset.chairPrice;
   }
+  for(var i = 0; i < chairItems.length; i++){
+    console.log(chairItems[i]);
+    chairItems[i].addEventListener("click", function () {
+      choseChair(this);
+      showPrice();
+    });
+  }
 
   /*color Type*/
   function choseColor(element){
     colorList.innerHTML = element.innerText;
     colorPrice.innerHTML = element.dataset.colorPrice;
+  }
+  for(var i = 0; i < colorItems.length; i++){
+    console.log(colorItems[i]);
+    colorItems[i].addEventListener("click", function () {
+      choseColor(this);
+      showPrice();
+
+    });
   }
 
   /*material Type*/
@@ -184,62 +168,29 @@ function displayStyle(element){
     materialList.innerHTML = element.innerText;
     materialPrice.innerHTML = element.dataset.materialPrice;
   }
-
-  for(var i = 0; i < chairItems.length; i++){
-    console.log(chairItems[i]);
-    chairItems[i].addEventListener("click", function () {
-      choseChair(this);
-    });
-  }
-  for(var i = 0; i < colorItems.length; i++){
-    console.log(colorItems[i]);
-    colorItems[i].addEventListener("click", function () {
-      choseColor(this);
-    });
-  }
   for(var i = 0; i < materialItems.length; i++){
     console.log(materialItems[i]);
     materialItems[i].addEventListener("click", function () {
       choseMaterial(this);
+      showPrice();
     });
   }
 
-  /*  transport */
+  /*  transport Y/N */
   transport.addEventListener("click", function () {
-
     if(transport.checked = true){
       transportList.innerHTML = "Transport";
       transportPrice.innerHTML = this.dataset.transportPrice;
+      showPrice();
     }
-
   });
-/* sum */
-  var sum = 0;
+
+  /* sum */
   var elementPrice =  document.querySelectorAll(".panel_right span");
-  var spanValue = elementPrice.value;
-  var showSum = document.getElementById("sum");
-  showSum.innerHTML = titlePrice.innerHTML;
-  console.log(titlePrice.innerHTML);
-  function showResult() {
-    var price = 10;
-    if(titlePrice.innerHTML === "" &&  colorPrice.innerHTML === "" && materialPrice.innerHTML === "" && transportPrice.innerHTML === ""){
-      return showSum.innerHTML = price;
-    }else{
-
-      for(var i = 0; i < elementPrice.length; i++){
-
-        price += parseFloat(elementPrice[i]);
-
-        return showSum.innerHTML = price;
-
-      }
-    }
+  console.log(elementPrice);
+  var totalCost = document.getElementById("sum");
+  function showPrice() {
+    totalCost.innerHTML =  Number(titlePrice.innerHTML) + Number(colorPrice.innerHTML) + Number(materialPrice.innerHTML) + Number(transportPrice.innerHTML) + " PLN";
   }
-
-
-listElements[i].addEventListener("click", function () {
-  showResult();
-});
-
 });
 

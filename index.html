@@ -23,8 +23,8 @@
                             <li><a href="#">Historia</a> </li>
                        </ul>
                     </li>
-                    <li><a href="#">Galeria</a> </li>
-                    <li><a href="#">Kontakt</a> </li>
+                    <li><a href="#first_div">Galeria</a> </li>
+                    <li><a href="#fourth">Kontakt</a> </li>
                 </ul>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="next right"> &gt;</div>
         </div>
     </section>
-    <section class="second">
+    <section id="second">
         <div class="gallery main_width">
             <div id="first_div"><div id="tab1"><p>Chair CLAIR</p></div></div>
             <div id="second_div"><div id="tab2"><p>Chair MARGARITA</p></div></div>
@@ -130,7 +130,7 @@
                     <div class="drop_down_list">
                         <span class="list_label">Wybierz rodzaj</span>
                         <span class="list_arrow"></span>
-                        <ul class="list_panel">
+                        <ul class="list_panel noSelect">
                             <li data-chair-price="200">Clair</li>
                             <li data-chair-price="250">Margarita</li>
                             <li data-chair-price="300">Selena</li>
@@ -139,7 +139,7 @@
                     <div class="drop_down_list">
                         <span class="list_label">Wybierz kolor</span>
                         <span class="list_arrow"></span>
-                        <ul class="list_panel">
+                        <ul class="list_panel noSelect">
                             <li data-color-price="0">Czerwony</li>
                             <li data-color-price="0">Czarny</li>
                             <li data-color-price="0">Pomarańczowy</li>
@@ -148,7 +148,7 @@
                     <div class="drop_down_list">
                         <span class="list_label">Wybierz materiał</span>
                         <span class="list_arrow"></span>
-                        <ul class="list_panel">
+                        <ul class="list_panel noSelect">
                             <li data-material-price="70">Tkanina</li>
                             <li data-material-price="190">Skóra</li>
                         </ul>
@@ -157,13 +157,11 @@
                         <input type="checkbox" id="transport" data-transport-price="200">
                         <label for="transport">Transport</label>
                     </div>
-                    <!--<div class="checkbox"></div>-->
-                    <!--<span class="list_label inline_text">Transport</span>-->
                 </div>
             </section>
 
             <section class="image_part inline">
-                <img src="Dodatkowe-kalkulator/images/red_chair.png">
+                <img src="Dodatkowe-kalkulator/images/red_chair.png" height="310" width="364">
             </section>
 
             <section class="summary_part inline">
@@ -180,20 +178,20 @@
                         <span class="transport"></span>
                     </div>
                     <div class="panel_right">
-                        <span class="title value"></span>
-                        <span class="color value"></span>
-                        <span class="pattern value"></span>
-                        <span class="transport value"></span>
+                        <span class="title value" onchange="addPrice()"></span>
+                        <span class="color value" onchange="addPrice()"></span>
+                        <span class="pattern value" onchange="addPrice()"></span>
+                        <span class="transport value" onchange="addPrice()"></span>
                     </div>
                     <div class="sum_label">SUMA<div id="sum"></div>
                     </div>
                 </div>
 
-                <a href="" class="green_button">Zamawiam</a>
+                <a href="" class="green_button grow">Zamawiam</a>
             </section>
         </div>
     </section>
-    <section class="fourth">
+    <section id="fourth">
         <div class="section_header main_width">
             <h2>KONTAKT</h2>
         <div class="contact main_width">
