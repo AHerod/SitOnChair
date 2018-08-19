@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Sit on chair is my website project created with HTML5 & CSS3 throughout first workshop at CodersLab. 
+Sit on chair is my website project created with HTML5, CSS3 & JS throughout first workshop at CodersLab. 
 
 **features:**
 - dropdown menu
